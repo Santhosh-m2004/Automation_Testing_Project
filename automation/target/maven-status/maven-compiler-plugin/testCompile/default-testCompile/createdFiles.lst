@@ -1,0 +1,10 @@
+base\BaseTest.class
+base\WaitUtils.class
+tests\AddToCartTest.class
+pages\ProductPage.class
+tests\CheckoutTest.class
+pages\LoginPage.class
+pages\CartPage.class
+pages\HomePage.class
+pages\CheckoutPage.class
+tests\LoginTest.class

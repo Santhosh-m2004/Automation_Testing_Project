@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ShopHub - Your Online Store</title>
+  <link rel="stylesheet" href="/css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="/" class="nav-logo">ShopHub</a>
+      <div class="nav-links">
+        <a href="/" class="nav-link"><i class="fas fa-home"></i> Home</a>
+        <a href="/cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart</a>
+        <div id="authLinks"></div>
+      </div>
+    </div>
+  </nav>
+
+  <main class="container">
+    <!-- Search and Filter Bar -->
+    <div class="search-filter-bar">
+      <input type="text" id="searchInput" placeholder="Search products..." class="search-input">
+      <select id="categoryFilter" class="category-select">
+        <option value="all">All Categories</option>
+      </select>
+      <button id="searchBtn" class="btn btn-primary"><i class="fas fa-search"></i> Search</button>
+    </div>
+
+    <h1 class="page-title">Featured Products</h1>
+    <div id="productGrid" class="product-grid">
+      <div class="loading">Loading products...</div>
+    </div>
+  </main>
+
+  <script src="/js/main.js"></script>
+  <script src="/js/index.js"></script>
+</body>
+</html>
