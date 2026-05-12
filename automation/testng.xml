@@ -1,10 +1,12 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Ecommerce Automation Suite" parallel="false">
+<suite name="E2E Full Suite" parallel="false">
     <test name="All Tests">
         <classes>
-            <class name="tests.LoginTest"/>
-            <class name="tests.AddToCartTest"/>
-            <class name="tests.CheckoutTest"/>
+            <class name="tests.HomePageTest"/>
+            <class name="tests.CartTest"/>
+            <class name="tests.WishlistTest"/>
+            <class name="tests.ReviewTest"/>
+            <class name="tests.AdminTest"/>
         </classes>
     </test>
 </suite>

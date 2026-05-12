@@ -7,11 +7,9 @@ import org.openqa.selenium.WebDriver;
 public class LoginPage {
     private WebDriver driver;
     private WaitUtils waitUtils;
-
-    private By navLoginLink = By.cssSelector("#authLinks a[href='/login.html']");
     private By emailInput = By.id("email");
     private By passwordInput = By.id("password");
-    private By loginButton = By.cssSelector("button[type='submit']");
+    private By loginButton = By.cssSelector("#loginForm button[type='submit']");
     private By errorMessage = By.cssSelector(".error-message");
     private By profileLink = By.cssSelector("a[href='/profile.html']");
 
@@ -21,7 +19,7 @@ public class LoginPage {
     }
 
     public void goToLoginPage() {
-        waitUtils.waitForElementClickable(navLoginLink).click();
+        driver.get("http://localhost:5000/login.html");
         waitUtils.waitForElementVisible(emailInput);
     }
 
@@ -37,6 +35,7 @@ public class LoginPage {
     }
 
     public boolean isErrorMessageDisplayed() {
-        return waitUtils.waitForElementVisible(errorMessage).isDisplayed();
+        waitUtils.waitForElementVisible(errorMessage);
+        return driver.findElement(errorMessage).isDisplayed();
     }
 }

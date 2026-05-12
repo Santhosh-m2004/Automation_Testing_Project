@@ -1,6 +1,7 @@
 package base;
 
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,7 +15,12 @@ public class WaitUtils {
 
     public WaitUtils(WebDriver driver) {
         this.driver = driver;
-        this.wait = new WebDriverWait(driver, Duration.ofSeconds(15));
+        this.wait = new WebDriverWait(driver, Duration.ofSeconds(10));
+    }
+
+    public void waitForPageLoad() {
+        wait.until(driver -> ((JavascriptExecutor) driver)
+                .executeScript("return document.readyState").equals("complete"));
     }
 
     public WebElement waitForElementVisible(By locator) {
@@ -25,14 +31,17 @@ public class WaitUtils {
         return wait.until(ExpectedConditions.elementToBeClickable(locator));
     }
 
-    public void waitForPageLoad() {
-        wait.until(webDriver -> ((org.openqa.selenium.JavascriptExecutor) webDriver)
-                .executeScript("return document.readyState").equals("complete"));
+    public void waitForProducts() {
+        try {
+            wait.until(ExpectedConditions.invisibilityOfElementLocated(By.cssSelector(".loading")));
+        } catch (Exception ignored) {}
+        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(".product-card")));
     }
 
-    public void waitForProductCardsToLoad() {
-        wait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(By.cssSelector(".product-card")));
-        waitForPageLoad();
+    public void waitForPagination() {
+        try {
+            wait.until(ExpectedConditions.presenceOfElementLocated(By.cssSelector(".pagination .page-btn")));
+        } catch (Exception ignored) {}
     }
 
     public void waitForAlertAndAccept() {

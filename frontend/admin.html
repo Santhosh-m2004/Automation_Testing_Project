@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>ShopHub - Orders</title>
+  <title>ShopHub - Admin</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
@@ -25,11 +25,11 @@
     </aside>
     <main class="main-content">
       <div class="container">
-        <div id="ordersContainer" class="orders-container"><div class="loading">Loading orders...</div></div>
+        <h1>Admin Dashboard</h1><div id="adminStats" class="stats-grid"></div><h2>All Orders</h2><div id="adminOrders"></div><h2>Add New Product</h2><form id="addProductForm" class="admin-form"><input type="text" id="productName" placeholder="Product Name" required><textarea id="productDesc" placeholder="Description" required></textarea><input type="number" id="productPrice" placeholder="Price" required><input type="text" id="productImage" placeholder="Image URL" required><input type="text" id="productCategory" placeholder="Category" required><input type="number" id="productStock" placeholder="Stock" required><button type="submit" class="btn btn-primary">Add Product</button></form>
       </div>
     </main>
   </div>
   <script src="/js/main.js"></script>
-  <script src="/js/orders.js"></script>
+  <script src="/js/admin.js"></script>
 </body>
 </html>

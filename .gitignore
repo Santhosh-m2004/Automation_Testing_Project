@@ -1,0 +1,72 @@
+# ===================
+# Node.js / Backend
+# ===================
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+.env
+.env.local
+.env.*.local
+
+# ===================
+# Java / Maven (Automation)
+# ===================
+automation/target/
+automation/pom.xml.tag
+automation/pom.xml.releaseBackup
+automation/pom.xml.versionsBackup
+automation/pom.xml.next
+automation/release.properties
+automation/dependency-reduced-pom.xml
+automation/buildNumber.properties
+automation/.mvn/timing.properties
+automation/.mvn/wrapper/maven-wrapper.jar
+
+# ===================
+# IDE / Editor files
+# ===================
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+.DS_Store
+*.iml
+.project
+.classpath
+.settings/
+*.sublime-*
+
+# ===================
+# Logs & temp files
+# ===================
+logs/
+*.log
+*.tmp
+*.temp
+test-output/
+surefire-reports/
+
+# ===================
+# OS generated files
+# ===================
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# ===================
+# Database files (if local)
+# ===================
+*.db
+*.sqlite
+*.sqlite3
+
+# ===================
+# Secrets (additional)
+# ===================
+*.pem
+*.key
+*.crt

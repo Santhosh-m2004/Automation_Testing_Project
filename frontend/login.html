@@ -8,36 +8,44 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">ShopHub</a>
-      <div class="nav-links">
-        <a href="/" class="nav-link"><i class="fas fa-home"></i> Home</a>
-        <a href="/cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart</a>
-        <div id="authLinks"></div>
+  <div class="app-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-logo">ShopHub</a>
+        <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
       </div>
-    </div>
-  </nav>
-
-  <main class="container auth-container">
-    <div class="auth-card">
-      <h2>Login to ShopHub</h2>
-      <form id="loginForm">
-        <div class="form-group">
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required>
+      <nav class="sidebar-nav">
+        <a href="/" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="/cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> <span>Cart</span></a>
+        <div id="authSidebarLinks"></div>
+      </nav>
+      <div class="sidebar-footer">
+        <div id="authSidebarFooter"></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="container">
+        <div class="auth-container">
+          <div class="auth-card">
+            <h2>Login to ShopHub</h2>
+            <form id="loginForm">
+              <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" required>
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+              </div>
+              <button type="submit" class="btn btn-primary btn-block">Login</button>
+            </form>
+            <p class="auth-footer">Don't have an account? <a href="/register.html">Register here</a></p>
+            <div id="loginMessage" class="message"></div>
+          </div>
         </div>
-        <div class="form-group">
-          <label for="password">Password</label>
-          <input type="password" id="password" name="password" required>
-        </div>
-        <button type="submit" class="btn btn-primary btn-block">Login</button>
-      </form>
-      <p class="auth-footer">Don't have an account? <a href="/register.html">Register here</a></p>
-      <div id="loginMessage" class="message"></div>
-    </div>
-  </main>
-
+      </div>
+    </main>
+  </div>
   <script src="/js/main.js"></script>
   <script src="/js/auth.js"></script>
 </body>

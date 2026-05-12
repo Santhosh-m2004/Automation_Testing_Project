@@ -3,29 +3,32 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Profile - ShopHub</title>
+  <title>ShopHub - Profile</title>
   <link rel="stylesheet" href="/css/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-  <nav class="navbar">
-    <div class="nav-container">
-      <a href="/" class="nav-logo">ShopHub</a>
-      <div class="nav-links">
-        <a href="/" class="nav-link"><i class="fas fa-home"></i> Home</a>
-        <a href="/cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> Cart</a>
-        <div id="authLinks"></div>
+  <div class="app-container">
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <a href="/" class="sidebar-logo">ShopHub</a>
+        <button class="sidebar-toggle" id="sidebarToggle"><i class="fas fa-bars"></i></button>
       </div>
-    </div>
-  </nav>
-
-  <main class="container">
-    <h1 class="page-title">My Profile</h1>
-    <div id="profileContainer" class="profile-container">
-      <div class="loading">Loading profile...</div>
-    </div>
-  </main>
-
+      <nav class="sidebar-nav">
+        <a href="/" class="nav-link"><i class="fas fa-home"></i> <span>Home</span></a>
+        <a href="/cart.html" class="nav-link"><i class="fas fa-shopping-cart"></i> <span>Cart</span></a>
+        <div id="authSidebarLinks"></div>
+      </nav>
+      <div class="sidebar-footer">
+        <div id="authSidebarFooter"></div>
+      </div>
+    </aside>
+    <main class="main-content">
+      <div class="container">
+        <div id="profileContainer" class="profile-container"><div class="loading">Loading profile...</div></div>
+      </div>
+    </main>
+  </div>
   <script src="/js/main.js"></script>
   <script src="/js/profile.js"></script>
 </body>
